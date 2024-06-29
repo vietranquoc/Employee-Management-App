@@ -1,0 +1,14 @@
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\bin\Debug\net8.0\BusinessObjects.deps.json
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\bin\Debug\net8.0\BusinessObjects.runtimeconfig.json
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\bin\Debug\net8.0\BusinessObjects.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\bin\Debug\net8.0\BusinessObjects.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.csproj.AssemblyReference.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.AssemblyInfoInputs.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.AssemblyInfo.cs
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.csproj.CoreCompileInputs.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\refint\BusinessObjects.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.genruntimeconfig.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\ref\BusinessObjects.dll

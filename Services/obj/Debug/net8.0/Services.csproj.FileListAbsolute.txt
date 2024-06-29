@@ -1,0 +1,11 @@
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\Services.deps.json
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\Services.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\Services.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\refint\Services.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\ref\Services.dll

@@ -1,0 +1,11 @@
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\bin\Debug\net8.0\Repositories.deps.json
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\bin\Debug\net8.0\Repositories.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\bin\Debug\net8.0\Repositories.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\ref\Repositories.dll
