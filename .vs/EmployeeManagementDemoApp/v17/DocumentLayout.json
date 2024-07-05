@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\regionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\regionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\countryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\countryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegionService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\RegionService.cs",
+              "RelativeDocumentMoniker": "Services\\RegionService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\RegionService.cs",
+              "RelativeToolTip": "Services\\RegionService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T07:30:27.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LocationService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\LocationService.cs",
+              "RelativeDocumentMoniker": "Services\\LocationService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\LocationService.cs",
+              "RelativeToolTip": "Services\\LocationService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCkAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T07:28:34.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JobService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\JobService.cs",
+              "RelativeDocumentMoniker": "Services\\JobService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\JobService.cs",
+              "RelativeToolTip": "Services\\JobService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T07:26:18.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\EmployeeService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "Services\\EmployeeService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACkAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T07:20:56.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DepartmentService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\DepartmentService.cs",
+              "RelativeDocumentMoniker": "Services\\DepartmentService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\DepartmentService.cs",
+              "RelativeToolTip": "Services\\DepartmentService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T07:18:14.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CountryService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\CountryService.cs",
+              "RelativeDocumentMoniker": "Services\\CountryService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\CountryService.cs",
+              "RelativeToolTip": "Services\\CountryService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T07:15:17.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "Services\\AccountService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\AccountService.cs",
+              "RelativeToolTip": "Services\\AccountService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T07:13:08.436Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
