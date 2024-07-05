@@ -16,7 +16,9 @@ public partial class EmployeeManagementContext : DbContext
     {
     }
 
-    public virtual DbSet<Country> Countries { get; set; }
+    public virtual DbSet<AccountMember> AccountMembers { get; set; }
+
+    public virtual DbSet<Deparment> Countries { get; set; }
 
     public virtual DbSet<Department> Departments { get; set; }
 
@@ -41,7 +43,22 @@ public partial class EmployeeManagementContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Country>(entity =>
+        modelBuilder.Entity<AccountMember>(entity =>
+        {
+            entity.HasKey(e => e.MemberId).HasName("PK__AccountM__0CF04B3855B20684");
+
+            entity.ToTable("AccountMember");
+
+            entity.Property(e => e.MemberId)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("MemberID");
+            entity.Property(e => e.Password)
+                .HasMaxLength(255)
+                .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<Deparment>(entity =>
         {
             entity.HasKey(e => e.CountryId).HasName("PK__Countrie__10D160BF0BDB796D");
 

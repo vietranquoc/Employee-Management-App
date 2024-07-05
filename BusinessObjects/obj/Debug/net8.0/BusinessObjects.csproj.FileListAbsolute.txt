@@ -12,3 +12,4 @@ D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\refint
 D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.pdb
 D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.genruntimeconfig.cache
 D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\ref\BusinessObjects.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\BusinessObjects\obj\Debug\net8.0\BusinessObjects.sourcelink.json
