@@ -9,3 +9,10 @@ D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositor
 D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\refint\Repositories.dll
 D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.pdb
 D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\ref\Repositories.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\bin\Debug\net8.0\BusinessObjects.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\bin\Debug\net8.0\DataAccessLayer.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\bin\Debug\net8.0\BusinessObjects.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\bin\Debug\net8.0\DataAccessLayer.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
+D:\Demo\PRN212\EmployeeManagementDemoApp\Repositories\obj\Debug\net8.0\Reposito.787EC4B2.Up2Date

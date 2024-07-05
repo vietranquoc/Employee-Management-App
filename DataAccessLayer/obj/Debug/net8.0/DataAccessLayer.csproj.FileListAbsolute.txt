@@ -3,3 +3,14 @@ D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\DataAc
 D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
 D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
 D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\bin\Debug\net8.0\BusinessObjects.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\bin\Debug\net8.0\BusinessObjects.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.sourcelink.json
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\DataAcce.E67BD773.Up2Date
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll

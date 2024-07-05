@@ -14,5 +14,7 @@ namespace Services
         void UpdateEmployee(Employee employee);
         void DeleteEmployee(Employee employee);
         Employee? GetEmployeeById(int id);
+        /* New features */
+        List<Employee> GetManagers();
     }
 }

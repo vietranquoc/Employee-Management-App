@@ -41,5 +41,25 @@ namespace Services
         {
             iEmployeeRepository.UpdateEmployee(employee);
         }
+
+        /* New features */
+        public List<Employee> GetManagers()
+        {
+            var employees = GetEmployees();
+            var managers =
+                employees
+                .Where(e => e.ManagerId.HasValue)
+                .Join(
+                    employees,
+                    e => e.ManagerId,
+                    m => m.EmployeeId,
+                    (e, m) => m)
+                .Distinct()
+                .GroupBy(m => m.EmployeeId)
+                .Select(g => g.First())
+                .ToList();
+
+            return managers;
+        }
     }
 }

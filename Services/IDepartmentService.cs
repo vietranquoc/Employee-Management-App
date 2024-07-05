@@ -14,5 +14,10 @@ namespace Services
         void UpdateDepartment(Department department);
         void DeleteDepartment(Department department);
         Department? GetDepartmentById(int id);
+
+        /* New features */
+        List<Department> GetDepartmentByName(string name);
+        List<Department> GetDepartmentsByManagerId(int managerId);
+        List<Department> GetDepartmentsByLocationId(string locationid);
     }
 }

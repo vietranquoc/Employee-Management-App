@@ -41,5 +41,33 @@ namespace Services
         {
             iDepartmentRepository.UpdateDepartment(department);
         }
+
+        /* New features */
+        public List<Department> GetDepartmentByName(string name)
+        {
+            var departments = 
+                GetDepartments()
+                .Where(d => d.DepartmentName.Contains(name))
+                .ToList();
+            return departments;
+        }
+
+        public List<Department> GetDepartmentsByManagerId(int managerId)
+        {
+            var departments =
+                GetDepartments()
+                .Where(d => d.ManagerId == managerId)
+                .ToList();
+            return departments;
+        }
+
+        public List<Department> GetDepartmentsByLocationId(string locationId)
+        {
+            var departments =
+                GetDepartments()
+                .Where(d => d.LocationId == locationId)
+                .ToList();
+            return departments;
+        }
     }
 }

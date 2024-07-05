@@ -9,3 +9,12 @@ D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.dll
 D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\refint\Services.dll
 D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.pdb
 D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\ref\Services.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\BusinessObjects.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\DataAccessLayer.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\Repositories.dll
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\BusinessObjects.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\Repositories.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\bin\Debug\net8.0\DataAccessLayer.pdb
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.sourcelink.json
+D:\Demo\PRN212\EmployeeManagementDemoApp\Services\obj\Debug\net8.0\Services.csproj.Up2Date
