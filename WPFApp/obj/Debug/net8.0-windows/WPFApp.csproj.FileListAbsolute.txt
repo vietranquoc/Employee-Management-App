@@ -97,3 +97,5 @@ D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\WPFApp.
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\WPFApp.csproj.Up2Date
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\DepartmentWindow.g.cs
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\DepartmentWindow.baml
+D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\JobWindow.g.cs
+D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\JobWindow.baml

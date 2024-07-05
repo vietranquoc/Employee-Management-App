@@ -41,5 +41,25 @@ namespace Services
         {
             iJobRepository.UpdateJob(job);
         }
+
+        /* New feature */
+
+        public List<Job> GetJobBySalary(int minSalary, int maxSalary)
+        {
+            var jobs =
+                GetJobs()
+                .Where(j => j.MinSalary >= minSalary && j.MaxSalary <= maxSalary)
+                .ToList();
+            return jobs;
+        }
+
+        public List<Job> GetJobByTitle(string title)
+        {
+            var jobs = 
+                GetJobs()
+                .Where(j => j.JobTitle.Contains(title))
+                .ToList();
+            return jobs;
+        }
     }
 }

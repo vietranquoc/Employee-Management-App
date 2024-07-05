@@ -41,7 +41,10 @@ namespace WPFApp
 
         private void btnJob_Click(object sender, RoutedEventArgs e)
         {
-
+            JobWindow jobWindow = new JobWindow();
+            jobWindow.Owner = this; // Set the owner of the DepartmentWindow
+            jobWindow.CurrentUserRole = CurrentUserRole; // Pass role to DepartmentWindow
+            jobWindow.ShowDialog();
         }
 
         private void btnRegion_Click(object sender, RoutedEventArgs e)

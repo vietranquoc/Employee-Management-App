@@ -14,5 +14,9 @@ namespace Services
         void UpdateJob(Job job);
         void DeleteJob(Job job);
         Job? GetJobById(string id);
+
+        /* New feature */
+        List<Job> GetJobByTitle(string title);
+        List<Job> GetJobBySalary(int minSalary, int maxSalary);
     }
 }

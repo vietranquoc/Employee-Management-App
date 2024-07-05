@@ -188,7 +188,8 @@ namespace WPFApp
             {
                 if (txtDepartmentId.Text.Length > 0)
                 {
-                    Department department = new Department();
+                    int departmentId = int.Parse(txtDepartmentId.Text);
+                    var department = iDepartmentService.GetDepartmentById(departmentId);
                     department.DepartmentId = int.Parse(txtDepartmentId.Text);
                     department.DepartmentName = txtDepartmentName.Text;
                     department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
@@ -221,12 +222,16 @@ namespace WPFApp
             {
                 if (txtDepartmentId.Text.Length > 0)
                 {
-                    Department department = new Department();
-                    department.DepartmentId = int.Parse(txtDepartmentId.Text);
-                    department.DepartmentName = txtDepartmentName.Text;
-                    department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
-                    department.LocationId = cboLocationId.SelectedValue != null ? cboLocationId.SelectedValue.ToString() : null;
-                    iDepartmentService.DeleteDepartment(department);
+                    int departmentId = int.Parse(txtDepartmentId.Text);
+                    var department = iDepartmentService.GetDepartmentById(departmentId);
+                    if (department != null)
+                    {
+                        iDepartmentService.DeleteDepartment(department);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Department not found");
+                    }
                 }
                 else
                 {
