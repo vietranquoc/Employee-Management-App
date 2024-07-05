@@ -11,30 +11,30 @@ namespace DataAccessLayer
     {
         public static EmployeeManagementContext context = new EmployeeManagementContext();
 
-        public static List<Deparment> GetCountries()
+        public static List<Country> GetCountries()
         {
             return context.Countries.ToList();
         }
 
-        public static void InsertCountry(Deparment country)
+        public static void InsertCountry(Country country)
         {
             context.Countries.Add(country);
             context.SaveChanges();
         }
 
-        public static void UpdateCountry(Deparment country)
+        public static void UpdateCountry(Country country)
         {
             context.Countries.Update(country);
             context.SaveChanges();
         }
 
-        public static void DeleteCountry(Deparment country)
+        public static void DeleteCountry(Country country)
         {
             context.Countries.Remove(country);
             context.SaveChanges();
         }
 
-        public static Deparment? GetCountryById(string countryId)
+        public static Country? GetCountryById(string countryId)
         {
             return context.Countries.Find(countryId);
         }

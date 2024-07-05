@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\regionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\regionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\locationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\locationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\jobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\jobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\countryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\countryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\iregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\iregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\dataaccesslayer\\regiondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\regiondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\repositories\\ilocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0541B8A5-0BD3-4BF5-AED2-6107062EB6BC}|Repositories\\Repositories.csproj|solutionrelative:repositories\\ilocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\dataaccesslayer\\locationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\locationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\dataaccesslayer\\jobdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\jobdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\dataaccesslayer\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\dataaccesslayer\\departmentdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\departmentdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\dataaccesslayer\\countrydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\countrydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\businessobjects\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\dataaccesslayer\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\businessobjects\\accountmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\accountmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegionRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\RegionRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\RegionRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\RegionRepository.cs",
+              "RelativeToolTip": "Repositories\\RegionRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxQAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:35:14.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LocationRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\LocationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\LocationRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\LocationRepository.cs",
+              "RelativeToolTip": "Repositories\\LocationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:21:34.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JobRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\JobRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\JobRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\JobRepository.cs",
+              "RelativeToolTip": "Repositories\\JobRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:20:11.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\EmployeeRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\EmployeeRepository.cs",
+              "RelativeToolTip": "Repositories\\EmployeeRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:19:16.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\DepartmentRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\DepartmentRepository.cs",
+              "RelativeToolTip": "Repositories\\DepartmentRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:18:12.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CountryRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\CountryRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\CountryRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\CountryRepository.cs",
+              "RelativeToolTip": "Repositories\\CountryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:16:53.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\AccountRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "Repositories\\AccountRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:15:48.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IRegionRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\IRegionRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IRegionRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\IRegionRepository.cs",
+              "RelativeToolTip": "Repositories\\IRegionRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:14:14.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ILocationRepository.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\ILocationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ILocationRepository.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Repositories\\ILocationRepository.cs",
+              "RelativeToolTip": "Repositories\\ILocationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:12:53.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AccountDAO.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\AccountDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\AccountDAO.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\AccountDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\AccountDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:36:44.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JobDAO.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\JobDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\JobDAO.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\JobDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\JobDAO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACQAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:33:05.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmployeeDAO.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\EmployeeDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\EmployeeDAO.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\EmployeeDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\EmployeeDAO.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACQAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:29:01.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DepartmentDAO.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\DepartmentDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DepartmentDAO.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\DepartmentDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\DepartmentDAO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACQAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:16:25.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CountryDAO.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\CountryDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\CountryDAO.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\CountryDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\CountryDAO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACQAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:00:57.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Region.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\Region.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Region.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\Region.cs",
+              "RelativeToolTip": "BusinessObjects\\Region.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:45:50.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LocationDAO.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\LocationDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\LocationDAO.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\LocationDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\LocationDAO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACQAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T04:11:45.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AccountMember.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\AccountMember.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\AccountMember.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\AccountMember.cs",
+              "RelativeToolTip": "BusinessObjects\\AccountMember.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T03:48:49.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegionDAO.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\RegionDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\RegionDAO.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\RegionDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\RegionDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T15:44:31.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFApp\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WPFApp\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T15:47:43.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\MainWindow.xaml",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\MainWindow.xaml",
+              "RelativeToolTip": "WPFApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-24T15:47:44.05Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

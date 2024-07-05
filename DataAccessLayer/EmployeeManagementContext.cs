@@ -18,7 +18,7 @@ public partial class EmployeeManagementContext : DbContext
 
     public virtual DbSet<AccountMember> AccountMembers { get; set; }
 
-    public virtual DbSet<Deparment> Countries { get; set; }
+    public virtual DbSet<Country> Countries { get; set; }
 
     public virtual DbSet<Department> Departments { get; set; }
 
@@ -58,7 +58,7 @@ public partial class EmployeeManagementContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Deparment>(entity =>
+        modelBuilder.Entity<Country>(entity =>
         {
             entity.HasKey(e => e.CountryId).HasName("PK__Countrie__10D160BF0BDB796D");
 
