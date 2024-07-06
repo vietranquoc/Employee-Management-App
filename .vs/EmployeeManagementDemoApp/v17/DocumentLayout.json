@@ -1,0 +1,278 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\employeewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\employeewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\jobwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\jobwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\businessobjects\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\departmentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\departmentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\employeewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\employeewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\businessobjects\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\businessobjects\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BFC3ED-BAE1-4B06-AF48-A9479E032371}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\departmentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\departmentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\dataaccesslayer\\jobdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA221522-5C1D-464F-8411-AAF3601C19B0}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\jobdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\wpfapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{186F6842-D4A7-4E56-97FF-B50BAA2C7B2B}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|d:\\demo\\prn212\\employeemanagementdemoapp\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9252258C-37E5-4608-9A25-B2592ED17879}|Services\\Services.csproj|solutionrelative:services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 180,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JobWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\JobWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFApp\\JobWindow.xaml.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\JobWindow.xaml.cs",
+              "RelativeToolTip": "WPFApp\\JobWindow.xaml.cs",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAkwLIAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T17:53:01.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Job.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\Job.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Job.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\Job.cs",
+              "RelativeToolTip": "BusinessObjects\\Job.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T10:42:49.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\EmployeeService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "Services\\EmployeeService.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAuwFAAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:52:17.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\IEmployeeService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\IEmployeeService.cs",
+              "RelativeToolTip": "Services\\IEmployeeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:52:13.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\Employee.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Employee.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\Employee.cs",
+              "RelativeToolTip": "BusinessObjects\\Employee.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wBsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T08:39:08.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\EmployeeWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFApp\\EmployeeWindow.xaml.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\EmployeeWindow.xaml.cs",
+              "RelativeToolTip": "WPFApp\\EmployeeWindow.xaml.cs",
+              "ViewState": "AQIAAG8BAAAAAAAAAAAIwJABAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T08:36:38.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\Department.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Department.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\BusinessObjects\\Department.cs",
+              "RelativeToolTip": "BusinessObjects\\Department.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T11:19:27.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeeWindow.xaml",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\EmployeeWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\EmployeeWindow.xaml",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\EmployeeWindow.xaml",
+              "RelativeToolTip": "WPFApp\\EmployeeWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-06T08:35:25.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JobDAO.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\JobDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\JobDAO.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\DataAccessLayer\\JobDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\JobDAO.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T20:01:22.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DepartmentWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\DepartmentWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFApp\\DepartmentWindow.xaml.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\DepartmentWindow.xaml.cs",
+              "RelativeToolTip": "WPFApp\\DepartmentWindow.xaml.cs",
+              "ViewState": "AQIAALIAAAAAAAAAAAAEwKwAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T09:05:44.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DepartmentWindow.xaml",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\DepartmentWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\DepartmentWindow.xaml",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\DepartmentWindow.xaml",
+              "RelativeToolTip": "WPFApp\\DepartmentWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-05T09:05:20.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\MainWindow.xaml",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\MainWindow.xaml",
+              "RelativeToolTip": "WPFApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-05T08:32:05.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFApp\\LoginWindow.xaml.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "WPFApp\\LoginWindow.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACAAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T19:54:31.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFApp\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\WPFApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WPFApp\\MainWindow.xaml.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAmwCYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T08:50:56.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DepartmentService.cs",
+              "DocumentMoniker": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\DepartmentService.cs",
+              "RelativeDocumentMoniker": "Services\\DepartmentService.cs",
+              "ToolTip": "D:\\Demo\\PRN212\\EmployeeManagementDemoApp\\Services\\DepartmentService.cs",
+              "RelativeToolTip": "Services\\DepartmentService.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAA0wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T19:41:25.283Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

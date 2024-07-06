@@ -61,5 +61,79 @@ namespace Services
 
             return managers;
         }
+
+        public List<Employee> GetEmployeesByName(string name)
+        {
+            var employees = GetEmployees();
+            var employeeFilter =
+                employees
+                .Where( e => e.FirstName.Contains(name) || e.LastName.Contains(name))
+                .ToList();
+            return employeeFilter;
+        }
+
+        public List<Employee> GetEmployeesBySalary(double minSalary, double maxSalary)
+        {
+            var employees = GetEmployees();
+            var employeeFilter =
+                employees
+                .Where(e => e.Salary >= minSalary)
+                .Where(e => e.Salary <= maxSalary)
+                .OrderBy(e => e.Salary) 
+                .ToList();
+            return employeeFilter;
+        }
+
+        public List<Employee> GetEmployeesByJobId(string jobId)
+        {
+            var employees = GetEmployees();
+            var employeeFilter =
+                employees
+                .Where (e => e.JobId == jobId)
+                .ToList();
+            return employeeFilter;
+        }
+
+        public List<Employee> GetEmployeesByManagerId(int managerId)
+        {
+            var employees = GetEmployees();
+            var employeeFilter =
+                employees
+                .Where(e => e.ManagerId == managerId)
+                .ToList();
+            return employeeFilter;
+        }
+
+        public List<Employee> GetEmployeesByDepartmentId(int departmentId)
+        {
+            var employees = GetEmployees();
+            var employeeFilter =
+                employees
+                .Where(e => e.DepartmentId == departmentId)
+                .ToList();
+            return employeeFilter;
+        }
+
+        public List<Employee> GetEmployeesByYearOfHireDate(int yearOfHireDate)
+        {
+            var employees = GetEmployees();
+            var employeeFilter =
+                employees
+                .Where(e => e.HireDate.Value.Year == yearOfHireDate)
+                .ToList();
+            return employeeFilter;
+        }
+
+        public List<Employee> GetEmployeesByCommission(double minCommission, double maxCommission)
+        {
+            var employees = GetEmployees();
+            var employeeFilter =
+                employees
+                .Where(e => e.CommissionPct >= minCommission)
+                .Where(e => e.CommissionPct <= maxCommission)
+                .OrderBy(e => e.CommissionPct)
+                .ToList();
+            return employeeFilter;
+        }
     }
 }

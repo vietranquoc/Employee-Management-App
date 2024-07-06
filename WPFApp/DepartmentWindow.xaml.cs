@@ -160,11 +160,17 @@ namespace WPFApp
             }
             try
             {
+                if (cboLocationId.SelectedValue == null)
+                {
+                    MessageBox.Show("Please choose a location.", "Input Error");
+                    return;
+                }
+
                 Department department = new Department();
                 department.DepartmentId = int.Parse(txtDepartmentId.Text);
                 department.DepartmentName = txtDepartmentName.Text;
                 department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
-                department.LocationId = cboLocationId.SelectedValue != null ? cboLocationId.SelectedValue.ToString() : null;
+                department.LocationId = cboLocationId.SelectedValue.ToString();
                 iDepartmentService.InsertDepartment(department);
             }
             catch (Exception ex)

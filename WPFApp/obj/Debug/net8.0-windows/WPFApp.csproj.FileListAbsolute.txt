@@ -99,3 +99,5 @@ D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\Departm
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\DepartmentWindow.baml
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\JobWindow.g.cs
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\JobWindow.baml
+D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\EmployeeWindow.g.cs
+D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\EmployeeWindow.baml
