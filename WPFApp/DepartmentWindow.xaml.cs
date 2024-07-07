@@ -165,13 +165,20 @@ namespace WPFApp
                     MessageBox.Show("Please choose a location.", "Input Error");
                     return;
                 }
-
+                if (txtDepartmentId.Text.ToString().Trim().Length <= 0 ||
+                    txtDepartmentName.Text.ToString().Trim().Length <= 0)
+                {
+                    MessageBox.Show("Please enter char not white space");
+                    return;
+                }
                 Department department = new Department();
                 department.DepartmentId = int.Parse(txtDepartmentId.Text);
                 department.DepartmentName = txtDepartmentName.Text;
                 department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
                 department.LocationId = cboLocationId.SelectedValue.ToString();
+
                 iDepartmentService.InsertDepartment(department);
+                MessageBox.Show("Create Successfully");
             }
             catch (Exception ex)
             {
@@ -201,6 +208,7 @@ namespace WPFApp
                     department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
                     department.LocationId = cboLocationId.SelectedValue != null ? cboLocationId.SelectedValue.ToString() : null;
                     iDepartmentService.UpdateDepartment(department);
+                    MessageBox.Show("Update Successfully");
                 }
                 else
                 {
@@ -233,6 +241,7 @@ namespace WPFApp
                     if (department != null)
                     {
                         iDepartmentService.DeleteDepartment(department);
+                        MessageBox.Show("Delete Successfully");
                     }
                     else
                     {

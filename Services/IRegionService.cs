@@ -14,5 +14,7 @@ namespace Services
         void UpdateRegion(Region region);
         void DeleteRegion(Region region);
         Region? GetRegionById(int id);
+        /*New feature*/
+        List<Region> GetRegionsByName(string name);
     }
 }

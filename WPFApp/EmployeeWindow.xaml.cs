@@ -312,7 +312,17 @@ namespace WPFApp
                     MessageBox.Show("Please choose a department.", "Input Error");
                     return;
                 }
-
+                if (txtEmployeeId.Text.ToString().Trim().Length <= 0 ||
+                    txtFirstName.Text.ToString().Trim().Length <= 0 ||
+                    txtLastName.Text.ToString().Trim().Length <= 0 ||
+                    txtEmail.Text.ToString().Trim().Length <= 0 ||
+                    txtPhone.Text.ToString().Trim().Length <= 0 ||
+                    txtSalary.Text.ToString().Trim().Length <= 0 ||
+                    txtCommission.Text.ToString().Trim().Length <= 0)
+                {
+                    MessageBox.Show("Please enter char not white space");
+                    return;
+                }
                 Employee employee = new Employee()
                 {
                     EmployeeId = int.Parse(txtEmployeeId.Text.ToString()),

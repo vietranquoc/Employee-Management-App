@@ -142,6 +142,14 @@ namespace WPFApp
             }
             try
             {
+                if (txtJobId.Text.ToString().Trim().Length <= 0 ||
+                    txtJobTitle.Text.ToString().Trim().Length <= 0 ||
+                    txtMinSalary.Text.ToString().Trim().Length <= 0 ||
+                    txtMaxSalary.Text.ToString().Trim().Length <= 0)
+                {
+                    MessageBox.Show("Please enter char not white space");
+                    return;
+                }
                 Job job = new Job()
                 {
                     JobId = txtJobId.Text,
@@ -150,6 +158,7 @@ namespace WPFApp
                     MaxSalary = int.Parse(txtMaxSalary.Text)
                 };
                 iJobService.InsertJob(job);
+                MessageBox.Show("Create Successfully");
             }
             catch (Exception ex)
             {
@@ -179,6 +188,7 @@ namespace WPFApp
                     job.MinSalary = int.Parse(txtMinSalary.Text);
                     job.MaxSalary = int.Parse(txtMaxSalary.Text);
                     iJobService.UpdateJob(job);
+                    MessageBox.Show("Update Successfully");
                 }
                 else
                 {
@@ -211,6 +221,7 @@ namespace WPFApp
                     if (job != null)
                     {
                         iJobService.DeleteJob(job);
+                        MessageBox.Show("Delete Successfully");
                     }
                     else
                     {

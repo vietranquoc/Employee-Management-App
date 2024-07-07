@@ -41,5 +41,18 @@ namespace Services
         {
             iRegionRepository.UpdateRegion(region);
         }
+
+        /*New feature*/
+
+        public List<Region> GetRegionsByName(string name)
+        {
+            var regions =
+                GetRegions()
+                .Where(r => r.RegionName.Contains(name))
+                .ToList();
+            return regions;
+        }
+
+
     }
 }

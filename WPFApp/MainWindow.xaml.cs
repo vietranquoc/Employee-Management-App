@@ -52,7 +52,10 @@ namespace WPFApp
 
         private void btnRegion_Click(object sender, RoutedEventArgs e)
         {
-
+            RegionWindow regionWindow = new RegionWindow();
+            regionWindow.Owner = this; // Set the owner of the DepartmentWindow
+            regionWindow.CurrentUserRole = CurrentUserRole; // Pass role to DepartmentWindow
+            regionWindow.ShowDialog();
         }
 
         private void btnCountry_Click(object sender, RoutedEventArgs e)
