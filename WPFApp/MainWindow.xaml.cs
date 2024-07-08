@@ -60,7 +60,10 @@ namespace WPFApp
 
         private void btnCountry_Click(object sender, RoutedEventArgs e)
         {
-
+            CountryWindow countryWindow = new CountryWindow();
+            countryWindow.Owner = this; // Set the owner of the DepartmentWindow
+            countryWindow.CurrentUserRole = CurrentUserRole; // Pass role to DepartmentWindow
+            countryWindow.ShowDialog();
         }
 
         private void btnLocation_Click(object sender, RoutedEventArgs e)

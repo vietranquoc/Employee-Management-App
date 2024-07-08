@@ -375,9 +375,13 @@ namespace WPFApp
                         employee.CommissionPct = double.Parse(txtCommission.Text.ToString());
                         employee.ManagerId = cboManager.SelectedValue != null ? int.Parse(cboManager.SelectedValue.ToString()) : (int?)null;
                         employee.DepartmentId = int.Parse(cboDepartment.SelectedValue.ToString());
+                        iEmployeeService.UpdateEmployee(employee);
+                        MessageBox.Show("Update Successfully");
                     }
-                    iEmployeeService.UpdateEmployee(employee);
-                    MessageBox.Show("Update Successfully");
+                    else
+                    {
+                        MessageBox.Show("Can not found employee");
+                    }
                 }
                 else
                 {

@@ -41,5 +41,27 @@ namespace Services
         {
             iCountryRepository.UpdateCountry(country);
         }
+
+        /*New feature*/
+
+        public List<Country> GetCountriesByName(string name)
+        {
+            var countries =
+                GetCountries()
+                .Where(c => c.CountryName.ToLower().Contains(name))
+                .ToList();
+            return countries;
+        }
+
+        public List<Country> GetCountriesByRegionId(int regionId)
+        {
+            var countries =
+                GetCountries()
+                .Where(c => c.RegionId == regionId)
+                .ToList();
+            return countries;
+        }
+
+
     }
 }

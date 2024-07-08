@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\App.xaml
-6-1862149256
+7-592130410
 
-9-1512239616
+101974784700
 249-1168618762
-DepartmentWindow.xaml;EmployeeWindow.xaml;JobWindow.xaml;LoginWindow.xaml;MainWindow.xaml;RegionWindow.xaml;
+CountryWindow.xaml;DepartmentWindow.xaml;EmployeeWindow.xaml;JobWindow.xaml;LoginWindow.xaml;MainWindow.xaml;RegionWindow.xaml;
 
 False
 

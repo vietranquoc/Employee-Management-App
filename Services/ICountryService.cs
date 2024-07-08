@@ -14,5 +14,8 @@ namespace Services
         void UpdateCountry(Country country);
         void DeleteCountry(Country country);
         Country? GetCountryById(string countryId);
+        /*New feature*/
+        List<Country> GetCountriesByName(string name);
+        List<Country> GetCountriesByRegionId(int regionId);
     }
 }

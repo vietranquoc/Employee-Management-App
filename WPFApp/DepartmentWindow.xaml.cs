@@ -203,12 +203,19 @@ namespace WPFApp
                 {
                     int departmentId = int.Parse(txtDepartmentId.Text);
                     var department = iDepartmentService.GetDepartmentById(departmentId);
-                    department.DepartmentId = int.Parse(txtDepartmentId.Text);
-                    department.DepartmentName = txtDepartmentName.Text;
-                    department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
-                    department.LocationId = cboLocationId.SelectedValue != null ? cboLocationId.SelectedValue.ToString() : null;
-                    iDepartmentService.UpdateDepartment(department);
-                    MessageBox.Show("Update Successfully");
+                    if (department != null)
+                    {
+                        department.DepartmentId = int.Parse(txtDepartmentId.Text);
+                        department.DepartmentName = txtDepartmentName.Text;
+                        department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
+                        department.LocationId = cboLocationId.SelectedValue != null ? cboLocationId.SelectedValue.ToString() : null;
+                        iDepartmentService.UpdateDepartment(department);
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can not found department");
+                    }
                 }
                 else
                 {

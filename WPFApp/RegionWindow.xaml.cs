@@ -139,11 +139,18 @@ namespace WPFApp
                 {
                     int regionId = int.Parse(txtRegionId.Text.ToString());
                     var region = iRegionService.GetRegionById(regionId);
-                    region.RegionId = int.Parse(txtRegionId.Text.ToString());
-                    region.RegionName = txtRegionName.Text.ToString();
+                    if (region != null)
+                    {
+                        region.RegionId = int.Parse(txtRegionId.Text.ToString());
+                        region.RegionName = txtRegionName.Text.ToString();
 
-                    iRegionService.UpdateRegion(region);
-                    MessageBox.Show("Update Successfully");
+                        iRegionService.UpdateRegion(region);
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can not found region");
+                    }
                 } 
                 else
                 {
@@ -165,11 +172,6 @@ namespace WPFApp
             if (CurrentUserRole != 1)
             {
                 MessageBox.Show("Only admin has role to delete region.", "Permission Denied");
-                return;
-            }
-            if (CurrentUserRole != 1)
-            {
-                MessageBox.Show("Only admin has role to update region.", "Permission Denied");
                 return;
             }
             try
