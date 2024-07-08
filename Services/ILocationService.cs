@@ -14,5 +14,11 @@ namespace Services
         void UpdateLocation(Location location);
         void DeleteLocation(Location location);
         Location? GetLocationById(string id);
+
+        /* New Features */
+        List<Location> GetLocaionsByCountryId(string countryId);
+        List<Location> GetLocationByCity(string searchText);
+        List<Location> GetLocationByStateProvince(string searchText);
+
     }
 }

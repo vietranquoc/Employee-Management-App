@@ -41,5 +41,36 @@ namespace Services
         {
             iLocationRepository.UpdateLocation(location);
         }
+
+        /* New feature */
+
+        public List<Location> GetLocaionsByCountryId(string countryId)
+        {
+            var locations = 
+                GetLocations()
+                .Where(l => l.CountryId == countryId)
+                .ToList();
+            return locations;
+        }
+
+        public List<Location> GetLocationByCity(string searchText)
+        {
+            var locations =
+                GetLocations()
+                .Where(l => l.City.ToLower().Contains(searchText))
+                .ToList();
+            return locations;
+        }
+
+        public List<Location> GetLocationByStateProvince(string searchText)
+        {
+            var locations = GetLocations()
+                .Where(l => !string.IsNullOrEmpty(l.StateProvince) && 
+                            l.StateProvince.ToLower().Contains(searchText.ToLower()))
+                .ToList();
+            return locations;
+        }
+
+
     }
 }

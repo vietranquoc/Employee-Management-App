@@ -68,7 +68,10 @@ namespace WPFApp
 
         private void btnLocation_Click(object sender, RoutedEventArgs e)
         {
-
+            LocationWindow locationWindow = new LocationWindow();
+            locationWindow.Owner = this; // Set the owner of the DepartmentWindow
+            locationWindow.CurrentUserRole = CurrentUserRole; // Pass role to DepartmentWindow
+            locationWindow.ShowDialog();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

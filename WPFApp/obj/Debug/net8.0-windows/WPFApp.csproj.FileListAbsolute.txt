@@ -105,3 +105,5 @@ D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\RegionW
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\RegionWindow.baml
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\CountryWindow.g.cs
 D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\CountryWindow.baml
+D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\LocationWindow.g.cs
+D:\Demo\PRN212\EmployeeManagementDemoApp\WPFApp\obj\Debug\net8.0-windows\LocationWindow.baml
