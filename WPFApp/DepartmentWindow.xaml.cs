@@ -160,9 +160,11 @@ namespace WPFApp
             }
             try
             {
-                if (cboLocationId.SelectedValue == null)
+                int departmentId = int.Parse(txtDepartmentId.Text);
+                var checkExist = iDepartmentService.GetDepartmentById(departmentId);
+                if (checkExist != null)
                 {
-                    MessageBox.Show("Please choose a location.", "Input Error");
+                    MessageBox.Show("Department Id is duplicated");
                     return;
                 }
                 if (txtDepartmentId.Text.ToString().Trim().Length <= 0 ||
@@ -171,11 +173,13 @@ namespace WPFApp
                     MessageBox.Show("Please enter char not white space");
                     return;
                 }
-                Department department = new Department();
-                department.DepartmentId = int.Parse(txtDepartmentId.Text);
-                department.DepartmentName = txtDepartmentName.Text;
-                department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
-                department.LocationId = cboLocationId.SelectedValue.ToString();
+                Department department = new Department()
+                {
+                    DepartmentId = departmentId,
+                    DepartmentName = txtDepartmentName.Text,
+                    ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null,
+                    LocationId = cboLocationId.SelectedValue.ToString()
+            };
 
                 iDepartmentService.InsertDepartment(department);
                 MessageBox.Show("Create Successfully");
@@ -205,7 +209,7 @@ namespace WPFApp
                     var department = iDepartmentService.GetDepartmentById(departmentId);
                     if (department != null)
                     {
-                        department.DepartmentId = int.Parse(txtDepartmentId.Text);
+                        //department.DepartmentId = int.Parse(txtDepartmentId.Text);
                         department.DepartmentName = txtDepartmentName.Text;
                         department.ManagerId = cboManagerId.SelectedValue != null ? int.Parse(cboManagerId.SelectedValue.ToString()) : (int?)null;
                         department.LocationId = cboLocationId.SelectedValue != null ? cboLocationId.SelectedValue.ToString() : null;

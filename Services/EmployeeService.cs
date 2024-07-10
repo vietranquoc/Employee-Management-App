@@ -3,6 +3,7 @@ using Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -129,10 +130,33 @@ namespace Services
             var employees = GetEmployees();
             var employeeFilter =
                 employees
-                .Where(e => e.CommissionPct >= minCommission)
-                .Where(e => e.CommissionPct <= maxCommission)
+                .Where(e => e.CommissionPct >= minCommission && e.CommissionPct <= maxCommission)
                 .OrderBy(e => e.CommissionPct)
                 .ToList();
+            return employeeFilter;
+        }
+
+        public bool checkIdExist(int id)
+        {
+            var employeeFilter =
+                GetEmployees()
+                .Any(e => e.EmployeeId == id); //Any(): được sử dụng để kiểm tra xem có bất kỳ phần tử nào trong một tập hợp thỏa mãn một điều kiện cụ thể hay không
+            return employeeFilter;
+        }
+
+        public bool checkPhoneExist(string phone)
+        {
+            var employeeFilter = 
+                GetEmployees()
+                .Any (e => e.Phone == phone);   
+            return employeeFilter;
+        }
+
+        public bool checkEmailExist(string email)
+        {
+            var employeeFilter =
+                GetEmployees()
+                .Any(e => e.Email == email);
             return employeeFilter;
         }
     }

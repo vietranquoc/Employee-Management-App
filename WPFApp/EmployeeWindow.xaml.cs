@@ -57,6 +57,10 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load Employees");
             }
+            finally
+            {
+                ResetInput();
+            }
         }
 
         private void LoadJob()
@@ -172,6 +176,21 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load employees by name");
             }
+        }
+
+        private void ResetInput()
+        {
+            txtEmployeeId.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtEmail.Text = "";
+            txtPhone.Text = "";
+            dpHireDate.SelectedDate = null;
+            cboJob.SelectedValue = null;
+            txtSalary.Text = "";
+            txtCommission.Text = "";
+            cboManager.SelectedValue = null;
+            cboDepartment.SelectedValue= null;
         }
 
         private void cboSeachJob_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -302,6 +321,27 @@ namespace WPFApp
             }
             try
             {
+                int id = int.Parse(txtEmployeeId.Text.ToString());
+                string phone = txtPhone.Text.ToString();
+                string email = txtEmail.Text.ToString();
+                var checkIdExist = iEmployeeService.checkIdExist(id);
+                var checkPhoneExist = iEmployeeService.checkPhoneExist(phone);
+                var checkEmailExist = iEmployeeService.checkEmailExist(email);
+                if (checkIdExist)
+                {
+                    MessageBox.Show($"ID: {id} is duplicated! \nPlease enter another ID");
+                    return;
+                }
+                if (checkPhoneExist)
+                {
+                    MessageBox.Show($"Phone number: {phone} is duplicated! \nPlease enter another Phone number");
+                    return;
+                }
+                if (checkEmailExist)
+                {
+                    MessageBox.Show($"Email: {email} is duplicated! \nPlease enter another Email");
+                    return;
+                }
                 if (cboJob.SelectedValue == null)
                 {
                     MessageBox.Show("Please choose a job.", "Input Error");
@@ -312,24 +352,26 @@ namespace WPFApp
                     MessageBox.Show("Please choose a department.", "Input Error");
                     return;
                 }
-                if (txtEmployeeId.Text.ToString().Trim().Length <= 0 ||
-                    txtFirstName.Text.ToString().Trim().Length <= 0 ||
-                    txtLastName.Text.ToString().Trim().Length <= 0 ||
-                    txtEmail.Text.ToString().Trim().Length <= 0 ||
-                    txtPhone.Text.ToString().Trim().Length <= 0 ||
-                    txtSalary.Text.ToString().Trim().Length <= 0 ||
-                    txtCommission.Text.ToString().Trim().Length <= 0)
+                if (txtEmployeeId.Text.Trim().Length <= 0 ||
+                    txtFirstName.Text.Trim().Length <= 0 ||
+                    txtLastName.Text.Trim().Length <= 0 ||
+                    txtEmail.Text.Trim().Length <= 0 ||
+                    txtPhone.Text.Trim().Length <= 0 ||
+                    txtSalary.Text.Trim().Length <= 0 ||
+                    txtCommission.Text.Trim().Length <= 0)
                 {
                     MessageBox.Show("Please enter char not white space");
                     return;
                 }
+
+                string phoneFormatted = FormatPhoneNumber(phone);
                 Employee employee = new Employee()
                 {
-                    EmployeeId = int.Parse(txtEmployeeId.Text.ToString()),
+                    EmployeeId = id,
                     FirstName = txtFirstName.Text.ToString(),
                     LastName = txtLastName.Text.ToString(),
-                    Email = txtEmail.Text.ToString(),
-                    Phone = txtPhone.Text.ToString(),
+                    Email = email,
+                    Phone = phoneFormatted,
                     HireDate = DateOnly.FromDateTime(dpHireDate.SelectedDate.Value),
                     JobId = cboJob.SelectedValue.ToString(),
                     Salary = double.Parse(txtSalary.Text.ToString()),
@@ -350,6 +392,17 @@ namespace WPFApp
             }
         }
 
+        private string FormatPhoneNumber(string phoneNumber)
+        {
+            phoneNumber = phoneNumber.Replace(".", "");
+
+            if (phoneNumber.Length != 10 || !phoneNumber.All(char.IsDigit))
+            {
+                throw new ArgumentException("Invalid phone number. It should contain exactly 10 digits.");
+            }
+            return $"{phoneNumber.Substring(0, 3)}.{phoneNumber.Substring(3, 3)}.{phoneNumber.Substring(6, 4)}";
+        }
+
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             if (CurrentUserRole != 1 && CurrentUserRole != 2)
@@ -363,12 +416,52 @@ namespace WPFApp
                 {
                     int id = int.Parse(txtEmployeeId.Text.ToString());
                     var employee = iEmployeeService.GetEmployeeById(id);
+
+                    string phone = txtPhone.Text.ToString();
+                    var checkPhoneExist = iEmployeeService.checkPhoneExist(phone);
+                    string email = txtEmail.Text.ToString();
+                    var checkEmailExist = iEmployeeService.checkEmailExist(email);
+
+                    string phoneFormatted = FormatPhoneNumber(phone);
+                    if (checkPhoneExist 
+                        && FormatPhoneNumber(employee.Phone.ToString()) != phoneFormatted)
+                    {
+                        MessageBox.Show($"Phone number: {phone} is duplicated! \nPlease enter another Phone number");
+                        return;
+                    }
+                    if (checkEmailExist && employee.Email != email)
+                    {
+                        MessageBox.Show($"Email: {email} is duplicated! \nPlease enter another Email");
+                        return;
+                    }
+                    if (cboJob.SelectedValue == null)
+                    {
+                        MessageBox.Show("Please choose a job.", "Input Error");
+                        return;
+                    }
+                    if (cboDepartment.SelectedValue == null)
+                    {
+                        MessageBox.Show("Please choose a department.", "Input Error");
+                        return;
+                    }
+                    if (txtEmployeeId.Text.Trim().Length <= 0 ||
+                        txtFirstName.Text.Trim().Length <= 0 ||
+                        txtLastName.Text.Trim().Length <= 0 ||
+                        txtEmail.Text.Trim().Length <= 0 ||
+                        txtPhone.Text.Trim().Length <= 0 ||
+                        txtSalary.Text.Trim().Length <= 0 ||
+                        txtCommission.Text.Trim().Length <= 0)
+                    {
+                        MessageBox.Show("Please enter char not white space");
+                        return;
+                    }
+
                     if (employee != null)
                     {
                         employee.FirstName = txtFirstName.Text;
                         employee.LastName = txtLastName.Text;
-                        employee.Email = txtEmail.Text;
-                        employee.Phone = txtPhone.Text;
+                        employee.Email = email;
+                        employee.Phone = phoneFormatted;
                         employee.HireDate = DateOnly.FromDateTime(dpHireDate.SelectedDate.Value);
                         employee.JobId = cboJob.SelectedValue.ToString();   
                         employee.Salary = double.Parse(txtSalary.Text.ToString());
@@ -411,12 +504,20 @@ namespace WPFApp
                 {
                     int id = int.Parse(txtEmployeeId.Text.ToString());
                     var employee = iEmployeeService.GetEmployeeById(id);
-                    iEmployeeService.DeleteEmployee(employee);
-                    MessageBox.Show("Delete Successfully");
+                    
+                    if (employee != null)
+                    {
+                        iEmployeeService.DeleteEmployee(employee);
+                        MessageBox.Show("Delete Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can not found employee");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please select a Job");
+                    MessageBox.Show("Please select a Employee");
                 }
             }
             catch (Exception ex)
