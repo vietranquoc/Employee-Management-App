@@ -115,7 +115,7 @@ namespace WPFApp
                 cboManager.SelectedValuePath = "EmployeeId";
 
                 var searchManager = iEmployeeService.GetManagers();
-                searchManager.Add(new Employee { EmployeeId = 999, ManagerId = 999 });
+                searchManager.Add(new Employee { EmployeeId = 0, ManagerId = 0 });
                 cboSeachManager.ItemsSource = searchManager;
                 cboSeachManager.DisplayMemberPath = "EmployeeId";
                 cboSeachManager.SelectedValuePath = "EmployeeId";
@@ -163,21 +163,6 @@ namespace WPFApp
             }
         }
 
-        private void txtSeachText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            try
-            {
-                string text = txtSeachText.Text;
-                dgData.ItemsSource = null;
-                var employeesFilter = iEmployeeService.GetEmployeesByName(text);
-                dgData.ItemsSource = employeesFilter;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error: Can not load employees by name");
-            }
-        }
-
         private void ResetInput()
         {
             txtEmployeeId.Text = "";
@@ -191,6 +176,23 @@ namespace WPFApp
             txtCommission.Text = "";
             cboManager.SelectedValue = null;
             cboDepartment.SelectedValue= null;
+        }
+
+
+        /*
+        private void txtSeachText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                string text = txtSeachText.Text;
+                dgData.ItemsSource = null;
+                var employeesFilter = iEmployeeService.GetEmployeesByName(text);
+                dgData.ItemsSource = employeesFilter;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error: Can not load employees by name");
+            }
         }
 
         private void cboSeachJob_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -220,12 +222,12 @@ namespace WPFApp
         {
             try
             {
-                double minCommission = 0, maxCommission = 0;
+                double minCommission = 0, maxCommission = double.MaxValue;
                 if (txtFilterCommissionMin.Text != "") double.TryParse(txtFilterCommissionMin.Text, out minCommission);
                 if (txtFilterCommissionMax.Text != "") double.TryParse(txtFilterCommissionMax.Text, out maxCommission);
 
                 dgData.ItemsSource = null;
-                if (maxCommission != 0 && minCommission > maxCommission)
+                if (maxCommission != double.MaxValue && minCommission > maxCommission)
                 {
                     MessageBox.Show("Min commission must be less than Max commission!");
                 }
@@ -245,12 +247,12 @@ namespace WPFApp
         {
             try
             {
-                double minSalary = 0, maxSalary = 0;
+                double minSalary = 0, maxSalary = double.MaxValue;
                 if (txtFilterSalaryMin.Text != "") double.TryParse(txtFilterSalaryMin.Text, out minSalary);
                 if (txtFilterSalaryMax.Text != "") double.TryParse(txtFilterSalaryMax.Text, out maxSalary);
 
                 dgData.ItemsSource = null;
-                if (maxSalary != 0 && minSalary > maxSalary)
+                if (maxSalary != double.MaxValue && minSalary > maxSalary)
                 {
                     MessageBox.Show("Min salary must be less than Max salary!");
                 }
@@ -263,6 +265,30 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not load employee by salary");
+            }
+        }
+
+        private void txtFilterHireDate_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                if (txtFilterHireDate.Text == "")
+                {
+                    dgData.ItemsSource = iEmployeeService.GetEmployees();
+                    return;
+                }
+                if (!int.TryParse(txtFilterHireDate.Text, out int year))
+                {
+                    MessageBox.Show("Please enter a valid year.");
+                    return;
+                }
+                dgData.ItemsSource = null;
+                var employeeFilter = iEmployeeService.GetEmployeesByYearOfHireDate(year);
+                dgData.ItemsSource = employeeFilter;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error: Can not load employees by year of hire date");
             }
         }
 
@@ -310,6 +336,114 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load employees by department");
             }
+        }
+
+        */
+
+        private void FilterEmployees()
+        {
+            try
+            {
+                string? name = txtSeachText.Text.Trim();
+                string? jobId = cboSeachJob.SelectedValue != null ? cboSeachJob.SelectedValue.ToString() : null;
+                int? managerId = cboSeachManager.SelectedValue != null ? int.Parse(cboSeachManager.SelectedValue.ToString()) : null;
+                int? departmentId = cboSeachDepartment.SelectedValue != null ? int.Parse(cboSeachDepartment.SelectedValue.ToString()) : null;
+
+                double? minSalary = 0, maxSalary = double.MaxValue;
+                if (!string.IsNullOrEmpty(txtFilterSalaryMin.Text)) 
+                {
+                    if (!double.TryParse(txtFilterSalaryMin.Text, out double minSal))
+                    {
+                        MessageBox.Show("Please enter a valid min salary.");
+                        return;
+                    }
+                    minSalary = minSal;
+                }
+                if (!string.IsNullOrEmpty(txtFilterSalaryMax.Text))
+                {
+                    if (!double.TryParse(txtFilterSalaryMax.Text, out double maxSal))
+                    {
+                        MessageBox.Show("Please enter a valid max salary.");
+                        return;
+                    }
+                    maxSalary = maxSal;
+                }
+
+                double? minCommission = 0, maxCommission = double.MaxValue;
+                if (!string.IsNullOrEmpty(txtFilterCommissionMin.Text))
+                {
+                    if (!double.TryParse(txtFilterCommissionMin.Text, out double minCom))
+                    {
+                        MessageBox.Show("Please enter a valid min Commsission.");
+                        return;
+                    }
+                    minCommission = minCom;
+                }
+                if (!string.IsNullOrEmpty(txtFilterCommissionMax.Text))
+                {
+                    if (!double.TryParse(txtFilterCommissionMax.Text, out double maxCom))
+                    {
+                        MessageBox.Show("Please enter a valid max Commsission.");
+                        return;
+                    }
+                    maxCommission = maxCom;
+                }
+                
+                int? yearOfHireDate = null;
+                if (!string.IsNullOrEmpty(txtFilterHireDate.Text))
+                {
+                    if (!int.TryParse(txtFilterHireDate.Text, out int year))
+                    {
+                        MessageBox.Show("Please enter a valid year.");
+                        return;
+                    }
+                    yearOfHireDate = year;
+                }
+                
+                dgData.ItemsSource = null;
+                var employeeFilter = iEmployeeService.FilterEmployees(
+                    name, minSalary, maxSalary, minCommission, maxCommission, jobId, managerId, departmentId, yearOfHireDate);
+                dgData.ItemsSource = employeeFilter;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error: Can not filter employees");
+            }
+        }
+
+        private void txtSeachText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            FilterEmployees();
+        }
+
+        private void cboSeachJob_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FilterEmployees();
+        }
+
+        private void cboSeachManager_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FilterEmployees();
+        }
+
+        private void cboSeachDepartment_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FilterEmployees();
+        }
+
+        private void txtFilterCommission_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            FilterEmployees();
+        }
+
+        private void txtFilterSalary_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            FilterEmployees();
+        }
+
+        private void txtFilterHireDate_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            FilterEmployees();
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)

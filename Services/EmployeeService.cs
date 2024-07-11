@@ -44,6 +44,8 @@ namespace Services
         }
 
         /* New features */
+
+        
         public List<Employee> GetManagers()
         {
             var employees = GetEmployees();
@@ -63,6 +65,7 @@ namespace Services
             return managers;
         }
 
+        /*
         public List<Employee> GetEmployeesByName(string name)
         {
             var employees = GetEmployees();
@@ -78,8 +81,7 @@ namespace Services
             var employees = GetEmployees();
             var employeeFilter =
                 employees
-                .Where(e => e.Salary >= minSalary)
-                .Where(e => e.Salary <= maxSalary)
+                .Where(e => e.Salary >= minSalary && e.Salary <= maxSalary)
                 .OrderBy(e => e.Salary) 
                 .ToList();
             return employeeFilter;
@@ -135,6 +137,7 @@ namespace Services
                 .ToList();
             return employeeFilter;
         }
+        */
 
         public bool checkIdExist(int id)
         {
@@ -158,6 +161,65 @@ namespace Services
                 GetEmployees()
                 .Any(e => e.Email == email);
             return employeeFilter;
+        }
+
+        public List<Employee> FilterEmployees(
+            string? name, 
+            double? minSalary, 
+            double? maxSalary, 
+            double? minCommission, 
+            double? maxCommission, 
+            string? jobId, 
+            int? managerId, 
+            int? departmentId, 
+            int? yearOfHireDate)
+        {
+            try
+            {
+                var employeeFilter = GetEmployees().AsQueryable();
+
+                if (!string.IsNullOrEmpty(name))
+                {
+                    employeeFilter = employeeFilter
+                        .Where(e => e.FirstName.Contains(name, StringComparison.OrdinalIgnoreCase) 
+                        || e.LastName.Contains(name, StringComparison.OrdinalIgnoreCase));
+                }
+                if (minSalary.HasValue && maxSalary.HasValue)
+                {
+                    employeeFilter = employeeFilter.Where(e => e.Salary >= minSalary && e.Salary <= maxSalary);
+                }
+
+                if (!string.IsNullOrEmpty(jobId) && jobId != "ALL")
+                {
+                    employeeFilter = employeeFilter.Where(e => e.JobId == jobId);
+                }
+
+                if (managerId.HasValue && managerId.Value != 0)
+                {
+                    employeeFilter = employeeFilter.Where(e => e.ManagerId == managerId);
+                }
+
+                if (departmentId.HasValue && departmentId != 0)
+                {
+                    employeeFilter = employeeFilter.Where(e => e.DepartmentId == departmentId);
+                }
+
+                if (yearOfHireDate.HasValue)
+                {
+                    employeeFilter = employeeFilter.Where(e => e.HireDate.HasValue && e.HireDate.Value.Year == yearOfHireDate);
+                }
+
+                if (minCommission.HasValue && maxCommission.HasValue)
+                {
+                    employeeFilter = employeeFilter.Where(e => e.CommissionPct >= minCommission && e.CommissionPct <= maxCommission);
+                }
+
+                return employeeFilter.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error filtering employees", ex);
+            }
         }
     }
 }

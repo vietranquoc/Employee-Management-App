@@ -104,6 +104,9 @@
                 <TextBox x:Name="txtFilterSalaryMax" Width="80" Margin="4 4 4 4" TextChanged="txtFilterSalary_TextChanged"/>
             </StackPanel>
 
+            <Label Margin=" 2, 2, 2, 2" Content="Search year of hire date:"/>
+            <TextBox x:Name="txtFilterHireDate" Margin="4 4 4 4" TextChanged="txtFilterHireDate_TextChanged"/>
+
             <Label Margin=" 2, 2, 2, 2" Content="Search Manager:"/>
             <ComboBox x:Name="cboSeachManager" Margin="4 4 4 4" SelectionChanged="cboSeachManager_SelectionChanged"/>
 

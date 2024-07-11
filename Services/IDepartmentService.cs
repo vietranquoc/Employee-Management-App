@@ -16,8 +16,9 @@ namespace Services
         Department? GetDepartmentById(int id);
 
         /* New features */
-        List<Department> GetDepartmentByName(string name);
-        List<Department> GetDepartmentsByManagerId(int managerId);
-        List<Department> GetDepartmentsByLocationId(string locationid);
+        //List<Department> GetDepartmentByName(string name);
+        //List<Department> GetDepartmentsByManagerId(int managerId);
+        //List<Department> GetDepartmentsByLocationId(string locationid);
+        List<Department> FilterDepartment(string? searchName, int? searchManager, string? searchLocation);
     }
 }

@@ -16,13 +16,23 @@ namespace Services
         Employee? GetEmployeeById(int id);
         /* New features */
         List<Employee> GetManagers();
-        List<Employee> GetEmployeesByName(string name);
-        List<Employee> GetEmployeesBySalary(double minSalary, double maxSalary);
-        List<Employee> GetEmployeesByCommission(double minCommission, double maxCommission);
-        List<Employee> GetEmployeesByJobId(string jobId);
-        List<Employee> GetEmployeesByManagerId(int managerId);
-        List<Employee> GetEmployeesByDepartmentId(int departmentId);
-        List<Employee> GetEmployeesByYearOfHireDate(int yearOfHireDate);
+        //List<Employee> GetEmployeesByName(string name);
+        //List<Employee> GetEmployeesBySalary(double minSalary, double maxSalary);
+        //List<Employee> GetEmployeesByCommission(double minCommission, double maxCommission);
+        //List<Employee> GetEmployeesByJobId(string jobId);
+        //List<Employee> GetEmployeesByManagerId(int managerId);
+        //List<Employee> GetEmployeesByDepartmentId(int departmentId);
+        //List<Employee> GetEmployeesByYearOfHireDate(int yearOfHireDate);
+        List<Employee> FilterEmployees(
+            string? name, 
+            double? minSalary, 
+            double? maxSalary, 
+            double? minCommission, 
+            double? maxCommission,
+            string? jobId, 
+            int? managerId, 
+            int? departmentId, 
+            int? yearOfHireDate);
         bool checkIdExist(int id);
         bool checkPhoneExist(string phone);
         bool checkEmailExist(string email);

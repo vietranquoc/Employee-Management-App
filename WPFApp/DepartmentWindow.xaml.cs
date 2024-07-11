@@ -77,7 +77,7 @@ namespace WPFApp
                 cboManagerId.SelectedValuePath = "EmployeeId";
 
                 var searchManager = iEmployeeService.GetManagers();
-                searchManager.Add(new Employee { EmployeeId = 999, ManagerId = 999 });
+                searchManager.Add(new Employee { EmployeeId = 0, ManagerId = 0 });
                 cboSeachManager.ItemsSource = searchManager;
                 cboSeachManager.DisplayMemberPath = "EmployeeId";
                 cboSeachManager.SelectedValuePath = "EmployeeId";
@@ -99,7 +99,7 @@ namespace WPFApp
                 cboLocationId.SelectedValuePath = "LocationId";
 
                 var searchLocation = iLocationService.GetLocations();
-                searchLocation.Add(new Location { LocationId = "9999"});
+                searchLocation.Add(new Location { LocationId = ""});
                 cboSeachLocation.ItemsSource = searchLocation;
                 cboSeachLocation.DisplayMemberPath = "LocationId";
                 cboSeachLocation.SelectedValuePath = "LocationId";
@@ -183,14 +183,11 @@ namespace WPFApp
 
                 iDepartmentService.InsertDepartment(department);
                 MessageBox.Show("Create Successfully");
+                LoadDepartments();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not create new Department");
-            }
-            finally
-            {
-                LoadDepartments();
             }
         }
 
@@ -215,6 +212,7 @@ namespace WPFApp
                         department.LocationId = cboLocationId.SelectedValue != null ? cboLocationId.SelectedValue.ToString() : null;
                         iDepartmentService.UpdateDepartment(department);
                         MessageBox.Show("Update Successfully");
+                        LoadDepartments();
                     }
                     else
                     {
@@ -229,10 +227,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not update Department");
-            }
-            finally
-            {
-                LoadDepartments();
             }
         }
 
@@ -253,6 +247,7 @@ namespace WPFApp
                     {
                         iDepartmentService.DeleteDepartment(department);
                         MessageBox.Show("Delete Successfully");
+                        LoadDepartments();
                     }
                     else
                     {
@@ -268,10 +263,6 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not delete Department");
             }
-            finally
-            {
-                LoadDepartments();
-            }
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -281,6 +272,7 @@ namespace WPFApp
 
         private void txtSeachText_TextChanged(object sender, TextChangedEventArgs e)
         {
+            /*
             try
             {
                 string search = txtSeachText.Text;
@@ -292,10 +284,13 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load department by name");
             }
+            */
+            FilterDepartments();
         }
 
         private void cboSeachManager_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            /*
             try
             {
                 int idManager = int.Parse(cboSeachManager.SelectedValue.ToString());
@@ -315,10 +310,13 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load department by manager Id");
             }
+            */
+            FilterDepartments();
         }
 
         private void cboSeachLocation_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            /*
             try
             {
                 string idLocation = cboSeachLocation.SelectedValue.ToString();
@@ -337,6 +335,36 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not load department by manager Id");
+            }
+            */
+            FilterDepartments();
+        }
+
+        private void FilterDepartments()
+        {
+            try
+            {
+                string search = txtSeachText.Text.Trim();
+                int idManager = cboSeachManager.SelectedValue != null ? int.Parse(cboSeachManager.SelectedValue.ToString()) : 0;
+                string idLocation = cboSeachLocation.SelectedValue != null ? cboSeachLocation.SelectedValue.ToString() : null;
+
+                dgData.ItemsSource = null;
+                List<Department> filteredDepartments;
+
+                if (string.IsNullOrEmpty(search) && idManager == 0 && string.IsNullOrEmpty(idLocation))
+                {
+                    filteredDepartments = iDepartmentService.GetDepartments();
+                }
+                else
+                {
+                    filteredDepartments = iDepartmentService.FilterDepartment(search, idManager, idLocation);
+                }
+
+                dgData.ItemsSource = filteredDepartments;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error: Can not filter departments");
             }
         }
     }

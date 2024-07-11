@@ -18,5 +18,6 @@ namespace Services
         /* New feature */
         List<Job> GetJobByTitle(string title);
         List<Job> GetJobBySalary(int minSalary, int maxSalary);
+        bool checkIdExist(string id);
     }
 }

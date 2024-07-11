@@ -112,12 +112,12 @@ namespace WPFApp
         {
             try
             {
-                int minSalary = 0, maxSalary = 0;
+                int minSalary = 0, maxSalary = int .MaxValue;
                 if (txtFilterMin.Text != "") int.TryParse(txtFilterMin.Text, out minSalary);
                 if (txtFilterMax.Text != "") int.TryParse(txtFilterMax.Text, out maxSalary);
 
                 dgData.ItemsSource = null;
-                if (minSalary > maxSalary)
+                if (maxSalary != int.MaxValue && minSalary > maxSalary)
                 {
                     MessageBox.Show("Min salary must be less than Max salary!");
                 }
@@ -142,17 +142,24 @@ namespace WPFApp
             }
             try
             {
-                if (txtJobId.Text.ToString().Trim().Length <= 0 ||
-                    txtJobTitle.Text.ToString().Trim().Length <= 0 ||
-                    txtMinSalary.Text.ToString().Trim().Length <= 0 ||
-                    txtMaxSalary.Text.ToString().Trim().Length <= 0)
+                string id = txtJobId.Text;
+                var checkIdExist = iJobService.checkIdExist(id);
+                if (checkIdExist)
+                {
+                    MessageBox.Show($"ID: {id} is duplicated! \nPlease enter another ID");
+                    return;
+                }
+                if (txtJobId.Text.Trim().Length <= 0 ||
+                    txtJobTitle.Text.Trim().Length <= 0 ||
+                    txtMinSalary.Text.Trim().Length <= 0 ||
+                    txtMaxSalary.Text.Trim().Length <= 0)
                 {
                     MessageBox.Show("Please enter char not white space");
                     return;
                 }
                 Job job = new Job()
                 {
-                    JobId = txtJobId.Text,
+                    JobId = id,
                     JobTitle = txtJobTitle.Text,
                     MinSalary = int.Parse(txtMinSalary.Text),
                     MaxSalary = int.Parse(txtMaxSalary.Text)
@@ -183,12 +190,28 @@ namespace WPFApp
                 {
                     string jobId = txtJobId.Text;
                     var job = iJobService.GetJobById(jobId);
-                    job.JobId = txtJobId.Text;
-                    job.JobTitle = txtJobTitle.Text;
-                    job.MinSalary = int.Parse(txtMinSalary.Text);
-                    job.MaxSalary = int.Parse(txtMaxSalary.Text);
-                    iJobService.UpdateJob(job);
-                    MessageBox.Show("Update Successfully");
+
+                    if (txtJobId.Text.Trim().Length <= 0 ||
+                    txtJobTitle.Text.Trim().Length <= 0 ||
+                    txtMinSalary.Text.Trim().Length <= 0 ||
+                    txtMaxSalary.Text.Trim().Length <= 0)
+                    {
+                        MessageBox.Show("Please enter char not white space");
+                        return;
+                    } 
+                    if (job != null)
+                    {
+                        //job.JobId = txtJobId.Text;
+                        job.JobTitle = txtJobTitle.Text;
+                        job.MinSalary = int.Parse(txtMinSalary.Text);
+                        job.MaxSalary = int.Parse(txtMaxSalary.Text);
+                        iJobService.UpdateJob(job);
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can not found job");
+                    }
                 }
                 else
                 {

@@ -57,9 +57,17 @@ namespace Services
         {
             var jobs = 
                 GetJobs()
-                .Where(j => j.JobTitle.Contains(title))
+                .Where(j => j.JobTitle.ToLower().Contains(title))
                 .ToList();
             return jobs;
+        }
+
+        public bool checkIdExist(string id)
+        {
+            var job =
+                GetJobs()
+                .Any(j => j.JobId == id);
+            return job;
         }
     }
 }

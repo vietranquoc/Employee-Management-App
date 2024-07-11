@@ -43,11 +43,12 @@ namespace Services
         }
 
         /* New features */
+        /*
         public List<Department> GetDepartmentByName(string name)
         {
             var departments = 
                 GetDepartments()
-                .Where(d => d.DepartmentName.Contains(name))
+                .Where(d => d.DepartmentName.ToLower().Contains(name))
                 .ToList();
             return departments;
         }
@@ -68,6 +69,27 @@ namespace Services
                 .Where(d => d.LocationId == locationId)
                 .ToList();
             return departments;
+        }
+        */
+
+        public List<Department> FilterDepartment(string? searchName, int? searchManager, string searchLocation)
+        {
+            try
+            {
+                var allDepartments = GetDepartments(); 
+                
+                var filterDepartments = allDepartments
+                    .Where(d => (string.IsNullOrEmpty(searchName) || d.DepartmentName.ToLower().Contains(searchName.ToLower())) &&
+                                (searchManager == 0 || d.ManagerId == searchManager) &&
+                                (string.IsNullOrEmpty(searchLocation) || d.LocationId == searchLocation))
+                    .ToList();
+
+                return filterDepartments;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error filtering departments", ex);
+            }
         }
     }
 }
