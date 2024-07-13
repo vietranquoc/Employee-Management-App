@@ -204,6 +204,14 @@ namespace WPFApp
                 {
                     int departmentId = int.Parse(txtDepartmentId.Text);
                     var department = iDepartmentService.GetDepartmentById(departmentId);
+
+                    if (txtDepartmentId.Text.ToString().Trim().Length <= 0 ||
+                    txtDepartmentName.Text.ToString().Trim().Length <= 0)
+                    {
+                        MessageBox.Show("Please enter char not white space");
+                        return;
+                    } 
+
                     if (department != null)
                     {
                         //department.DepartmentId = int.Parse(txtDepartmentId.Text);

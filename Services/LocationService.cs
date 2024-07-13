@@ -71,6 +71,32 @@ namespace Services
             return locations;
         }
 
+        public bool CheckIdExist(string id)
+        {
+            var check =
+                GetLocations()
+                .Any(l => l.LocationId == id);
+            return check;
+        }
 
+        public List<Location> FilterLocations(string? countryId, string? city, string? stateProvince)
+        {
+            var allLocations = GetLocations().AsQueryable();
+
+            if (!string.IsNullOrEmpty(countryId) && countryId != "ALL")
+            {
+                allLocations = allLocations.Where(l => l.CountryId == countryId);
+            }
+            if (!string.IsNullOrEmpty(city))
+            {
+                allLocations = allLocations.Where(l => l.City.Contains(city, StringComparison.OrdinalIgnoreCase));
+            }
+            if (!string.IsNullOrEmpty(stateProvince))
+            {
+                allLocations = allLocations.Where(l => l.StateProvince.Contains(stateProvince, StringComparison.OrdinalIgnoreCase));
+            }
+
+            return allLocations.ToList();
+        }
     }
 }

@@ -93,8 +93,10 @@ namespace WPFApp
             }
         }
 
+        
         private void txtSeachText_TextChanged(object sender, TextChangedEventArgs e)
         {
+            /*
             try
             {
                 string title = txtSeachText.Text;
@@ -106,10 +108,13 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load job by title");
             }
+            */
+            FilterJobs();
         }
 
         private void txtFilterSalary_TextChanged(object sender, TextChangedEventArgs e)
         {
+            /*
             try
             {
                 int minSalary = 0, maxSalary = int .MaxValue;
@@ -130,6 +135,44 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not load job by salary");
+            }
+            */
+            FilterJobs();
+        }
+
+        private void FilterJobs()
+        {
+            try
+            {
+                string? title = txtSeachText.Text.Trim();
+                int? minSalary = 0, maxSalary = int.MaxValue;
+                if (!string.IsNullOrEmpty(txtFilterMin.Text))
+                {
+                    if (!int.TryParse(txtFilterMin.Text, out int minSal))
+                    {
+                        MessageBox.Show("Please enter a valid min salary.");
+                        return;
+                    }
+                    minSalary = minSal;
+                }
+                if (!string.IsNullOrEmpty(txtFilterMax.Text))
+                {
+                    if (!int.TryParse(txtFilterMax.Text, out int maxSal))
+                    {
+                        MessageBox.Show("Please enter a valid max salary.");
+                        return;
+                    }
+                    maxSalary = maxSal;
+                }
+
+                dgData.ItemsSource = null;
+                var filterJobs = iJobService.FilterJob(title, minSalary, maxSalary);
+
+                dgData.ItemsSource = filterJobs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error: Can not filter jobs");
             }
         }
 
@@ -166,14 +209,11 @@ namespace WPFApp
                 };
                 iJobService.InsertJob(job);
                 MessageBox.Show("Create Successfully");
+                LoadJob();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not create new Job");
-            }
-            finally
-            {
-                LoadJob();
             }
         }
 
@@ -207,6 +247,7 @@ namespace WPFApp
                         job.MaxSalary = int.Parse(txtMaxSalary.Text);
                         iJobService.UpdateJob(job);
                         MessageBox.Show("Update Successfully");
+                        LoadJob();
                     }
                     else
                     {
@@ -221,10 +262,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not update Job");
-            }
-            finally
-            {
-                LoadJob();
             }
         }
 
@@ -245,6 +282,7 @@ namespace WPFApp
                     {
                         iJobService.DeleteJob(job);
                         MessageBox.Show("Delete Successfully");
+                        LoadJob();
                     }
                     else
                     {
@@ -259,10 +297,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not delete Job");
-            }
-            finally
-            {
-                LoadJob();
             }
         }
 

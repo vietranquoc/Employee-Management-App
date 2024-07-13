@@ -19,6 +19,8 @@ namespace Services
         List<Location> GetLocaionsByCountryId(string countryId);
         List<Location> GetLocationByCity(string searchText);
         List<Location> GetLocationByStateProvince(string searchText);
+        bool CheckIdExist(string id);
+        List<Location> FilterLocations(string? countryId, string? city, string? stateProvince); 
 
     }
 }

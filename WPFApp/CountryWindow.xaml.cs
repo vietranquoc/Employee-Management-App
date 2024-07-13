@@ -42,6 +42,13 @@ namespace WPFApp
             }
         }
 
+        private void ResetInput()
+        {
+            txtCountryId.Text = "";
+            txtCountryName.Text = "";
+            cboRegionId.SelectedValue = false;
+        }
+
         private void LoadCountry()
         {
             try
@@ -53,6 +60,10 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not load countries");
+            }
+            finally
+            {
+                ResetInput();
             }
         }
 
@@ -106,6 +117,7 @@ namespace WPFApp
 
         private void txtSeachText_TextChanged(object sender, TextChangedEventArgs e)
         {
+            /*
             try
             {
                 string search = txtSeachText.Text;
@@ -117,10 +129,13 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load country by name");
             }
+            */
+            FilterCountries();
         }
 
         private void cboSeachRegion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            /*
             try
             {
                 int idRegion = int.Parse(cboSeachRegion.SelectedValue.ToString());
@@ -140,6 +155,18 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load country by region Id");
             }
+            */
+            FilterCountries();
+        }
+
+        private void FilterCountries()
+        {
+            string? search = txtSeachText.Text.Trim();
+            int? regionId = cboSeachRegion.SelectedValue != null ? int.Parse(cboSeachRegion.SelectedValue.ToString()) : null;
+
+            dgData.ItemsSource = null;
+            var filterCountries = iCountryService.FilterCountries(search, regionId);
+            dgData.ItemsSource = filterCountries;
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
@@ -151,28 +178,34 @@ namespace WPFApp
             }
             try
             {
-                if (txtCountryName.Text.ToString().Trim().Length <= 0 ||
-                    txtCountryId.Text.ToString().Trim().Length <= 0)
+                
+                string countryId = txtCountryId.Text.ToString();
+                var checkIdExist = iCountryService.checkIdExist(countryId);
+                if (checkIdExist)
+                {
+                    MessageBox.Show($"ID: {countryId} is duplicated! \nPlease enter another ID");
+                    return;
+                }
+                if (txtCountryName.Text.Trim().Length <= 0 ||
+                    txtCountryId.Text.Trim().Length <= 0)
                 {
                     MessageBox.Show("Please enter char not white space");
                     return;
                 }
+
                 Country country = new Country()
                 {
-                    CountryId = txtCountryId.Text.ToString(),
+                    CountryId = countryId,
                     CountryName = txtCountryName.Text.ToString(),
                     RegionId = int.Parse(cboRegionId.SelectedValue.ToString()),
                 };
                 iCountryService.InsertCountry(country);
                 MessageBox.Show("Create Successfully");
+                LoadCountry();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not create new country");
-            }
-            finally
-            {
-                LoadCountry();
             }
         }
 
@@ -189,14 +222,23 @@ namespace WPFApp
                 {
                     string countryId = txtCountryId.Text.ToString();
                     var country = iCountryService.GetCountryById(countryId);
+
+                    if (txtCountryName.Text.ToString().Trim().Length <= 0 ||
+                    txtCountryId.Text.ToString().Trim().Length <= 0)
+                    {
+                        MessageBox.Show("Please enter char not white space");
+                        return;
+                    }
+
                     if (country != null)
                     {
-                        country.CountryId = txtCountryId.Text.ToString();
+                        //country.CountryId = txtCountryId.Text.ToString();
                         country.CountryName = txtCountryName.Text.ToString();
                         country.RegionId = int.Parse(cboRegionId.SelectedValue.ToString());
 
                         iCountryService.UpdateCountry(country);
                         MessageBox.Show("Update Successfully");
+                        LoadCountry();
                     }
                     else
                     {
@@ -212,10 +254,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not update country");
-            }
-            finally
-            {
-                LoadCountry();
             }
         }
 
@@ -233,8 +271,17 @@ namespace WPFApp
                     string countryId = txtCountryId.Text.ToString();
                     var country = iCountryService.GetCountryById(countryId);
 
-                    iCountryService.DeleteCountry(country);
-                    MessageBox.Show("Delete Successfully");
+                    if (country != null)
+                    {
+                        iCountryService.DeleteCountry(country);
+                        MessageBox.Show("Delete Successfully");
+                        LoadCountry();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can not found country");
+                        return;
+                    }
                 }
                 else
                 {
@@ -244,10 +291,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not delete country");
-            }
-            finally
-            {
-                LoadCountry();
             }
         }
 

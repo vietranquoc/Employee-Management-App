@@ -72,14 +72,14 @@ namespace Services
         }
         */
 
-        public List<Department> FilterDepartment(string? searchName, int? searchManager, string searchLocation)
+        public List<Department> FilterDepartment(string? searchName, int? searchManager, string? searchLocation)
         {
             try
             {
                 var allDepartments = GetDepartments(); 
                 
                 var filterDepartments = allDepartments
-                    .Where(d => (string.IsNullOrEmpty(searchName) || d.DepartmentName.ToLower().Contains(searchName.ToLower())) &&
+                    .Where(d => (string.IsNullOrEmpty(searchName) || d.DepartmentName.Contains(searchName, StringComparison.OrdinalIgnoreCase)) &&
                                 (searchManager == 0 || d.ManagerId == searchManager) &&
                                 (string.IsNullOrEmpty(searchLocation) || d.LocationId == searchLocation))
                     .ToList();

@@ -44,6 +44,16 @@ namespace WPFApp
             }
         }
 
+        private void ResetInput()
+        {
+            txtLocationId.Text = "";
+            txtStressAddress.Text = "";
+            txtPostalCode.Text = "";
+            txtCity.Text = "";
+            txtStateProvince.Text = "";
+            cboCountry.SelectedValue = false;
+        }
+
         private void LoadLocation()
         {
             try
@@ -55,6 +65,10 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not load location");
+            }
+            finally
+            {
+                ResetInput();
             }
         }
 
@@ -101,9 +115,9 @@ namespace WPFApp
                     Location location = iLocationService.GetLocationById(locationId);
                     txtLocationId.Text = location.LocationId.ToString();
                     txtStressAddress.Text = location.StreetAddress.ToString();
-                    txtPostalCode.Text = location.PostalCode != null ? location.PostalCode.ToString() : "null";
+                    txtPostalCode.Text = location.PostalCode != null ? location.PostalCode.ToString() : "";
                     txtCity.Text = location.City.ToString();
-                    txtStateProvince.Text = location.StateProvince != null ? location.StateProvince.ToString() : "null";
+                    txtStateProvince.Text = location.StateProvince != null ? location.StateProvince.ToString() : "";
                     cboCountry.SelectedValue = location.CountryId;
                 }
             }
@@ -111,6 +125,7 @@ namespace WPFApp
 
         private void txtSeachCity_TextChanged(object sender, TextChangedEventArgs e)
         {
+            /*
             try
             {
                 string search = txtSeachCity.Text;
@@ -122,10 +137,13 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load location by city");
             }
+            */
+            FilterLocations();
         }
 
         private void txtSeachStateProvince_TextChanged(object sender, TextChangedEventArgs e)
         {
+            /*
             try
             {
                 string search = txtSeachStateProvince.Text;
@@ -137,10 +155,13 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load location by state province");
             }
+            */
+            FilterLocations();
         }
 
         private void cboSeachCountry_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            /*
             try
             {
                 string idCountry = cboSearchCountry.SelectedValue.ToString();
@@ -160,7 +181,28 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not load location by country Id");
             }
+            */
+            FilterLocations();
         }
+
+        private void FilterLocations()
+        {
+            try
+            {
+                string? countryId = cboSearchCountry.SelectedValue != null ? cboSearchCountry.SelectedValue.ToString() : null;
+                string? city = txtSeachCity.Text.Trim();
+                string? statePro = txtSeachStateProvince.Text.Trim();
+
+                dgData.ItemsSource = null;
+                var loactionFilter = iLocationService.FilterLocations(countryId, city, statePro);
+                dgData.ItemsSource = loactionFilter;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error: Can not filter locations");
+            }
+        }
+
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
@@ -171,6 +213,14 @@ namespace WPFApp
             }
             try
             {
+                string loactionId = txtLocationId.Text.ToString();
+                var checkIdExist = iLocationService.CheckIdExist(loactionId);
+                if (checkIdExist)
+                {
+                    MessageBox.Show($"ID: {loactionId} is duplicated! \nPlease enter another ID");
+                    return;
+                }
+
                 if (txtLocationId.Text.Trim().Length <= 0 ||
                     txtStressAddress.Text.Trim().Length <= 0 ||
                     txtPostalCode.Text.Trim().Length <= 0 ||
@@ -182,7 +232,7 @@ namespace WPFApp
                 }
                 Location loaction = new Location()
                 {
-                    LocationId = txtLocationId.Text.ToString(),
+                    LocationId = loactionId,
                     StreetAddress = txtStressAddress.Text.ToString(),
                     PostalCode = txtPostalCode.Text.ToString(),
                     City = txtCity.Text.ToString(),
@@ -191,14 +241,11 @@ namespace WPFApp
                 };
                 iLocationService.InsertLocation(loaction);
                 MessageBox.Show("Create successfully");
+                LoadLocation();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not create new location");
-            }
-            finally
-            {
-                LoadLocation();
             }
         }
 
@@ -215,9 +262,20 @@ namespace WPFApp
                 {
                     string loactionId = txtLocationId.Text.ToString();
                     var location = iLocationService.GetLocationById(loactionId);
+
+                    if (txtLocationId.Text.Trim().Length <= 0 ||
+                    txtStressAddress.Text.Trim().Length <= 0 ||
+                    txtPostalCode.Text.Trim().Length <= 0 ||
+                    txtCity.Text.Trim().Length <= 0 ||
+                    txtStateProvince.Text.Trim().Length <= 0)
+                    {
+                        MessageBox.Show("Please enter char not white space");
+                        return;
+                    }
+
                     if (location != null)
                     {
-                        location.LocationId = txtLocationId.Text.ToString();
+                        //location.LocationId = txtLocationId.Text.ToString();
                         location.StreetAddress = txtStressAddress.Text.ToString();
                         location.PostalCode = txtPostalCode.Text.ToString();
                         location.City = txtCity.Text.ToString();
@@ -226,6 +284,7 @@ namespace WPFApp
 
                         iLocationService.UpdateLocation(location);
                         MessageBox.Show("Update successfully");
+                        LoadLocation();
                     }
                     else
                     {
@@ -243,10 +302,6 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not update location");
             }
-            finally
-            {
-                LoadLocation();
-            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -263,8 +318,17 @@ namespace WPFApp
                     string loactionId = txtLocationId.Text.ToString();
                     var location = iLocationService.GetLocationById(loactionId);
                     
-                    iLocationService.DeleteLocation(location);
-                    MessageBox.Show("Delete Successfully");
+                    if (location != null)
+                    {
+                        iLocationService.DeleteLocation(location);
+                        MessageBox.Show("Delete Successfully");
+                        LoadLocation();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can not found location");
+                        return;
+                    }
                 }
                 else
                 {
@@ -274,10 +338,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not Delete location");
-            }
-            finally
-            {
-                LoadLocation();
             }
         }
 

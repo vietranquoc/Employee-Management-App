@@ -102,27 +102,31 @@ namespace WPFApp
             }
             try
             {
-                if (txtRegionName.Text.ToString().Trim().Length <= 0 ||
-                    txtRegionId.Text.ToString().Trim().Length <= 0)
+                if (txtRegionName.Text.Trim().Length <= 0 ||
+                    txtRegionId.Text.Trim().Length <= 0)
                 {
                     MessageBox.Show("Please enter char not white space");
                     return;
                 }
+                var regionId = int.Parse(txtRegionId.Text.ToString());
+                var checkIdExist = iRegionService.CheckIdExist(regionId);
+                if (checkIdExist)
+                {
+                    MessageBox.Show($"ID: {regionId} is duplicated! \nPlease enter another ID");
+                    return;
+                }
                 Region region = new Region()
                 {
-                    RegionId = int.Parse(txtRegionId.Text.ToString()),
+                    RegionId = regionId,
                     RegionName = txtRegionName.Text.ToString()
                 };
                 iRegionService.InsertRegion(region);
                 MessageBox.Show("Create Successfully");
+                LoadRegion();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not create new region");
-            }
-            finally
-            {
-                LoadRegion();
             }
         }
 
@@ -139,13 +143,22 @@ namespace WPFApp
                 {
                     int regionId = int.Parse(txtRegionId.Text.ToString());
                     var region = iRegionService.GetRegionById(regionId);
+
+                    if (txtRegionName.Text.Trim().Length <= 0 ||
+                    txtRegionId.Text.Trim().Length <= 0)
+                    {
+                        MessageBox.Show("Please enter char not white space");
+                        return;
+                    }
+
                     if (region != null)
                     {
-                        region.RegionId = int.Parse(txtRegionId.Text.ToString());
+                        //region.RegionId = int.Parse(txtRegionId.Text.ToString());
                         region.RegionName = txtRegionName.Text.ToString();
 
                         iRegionService.UpdateRegion(region);
                         MessageBox.Show("Update Successfully");
+                        LoadRegion();
                     }
                     else
                     {
@@ -160,10 +173,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not update region");
-            }
-            finally
-            {
-                LoadRegion();
             }
         }
 
@@ -181,8 +190,16 @@ namespace WPFApp
                     int regionId = int.Parse(txtRegionId.Text.ToString());
                     var region = iRegionService.GetRegionById(regionId);
 
-                    iRegionService.DeleteRegion(region);
-                    MessageBox.Show("Delete Successfully");
+                    if (region != null)
+                    {
+                        iRegionService.DeleteRegion(region);
+                        MessageBox.Show("Delete Successfully");
+                        LoadRegion();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Region not found");
+                    }
                 }
                 else
                 {
@@ -192,10 +209,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not delete region");
-            }
-            finally
-            {
-                LoadRegion();
             }
         }
 

@@ -43,25 +43,50 @@ namespace Services
         }
 
         /*New feature*/
+        /*
+       public List<Country> GetCountriesByName(string name)
+       {
+           var countries =
+               GetCountries()
+               .Where(c => c.CountryName.ToLower().Contains(name))
+               .ToList();
+           return countries;
+       }
 
-        public List<Country> GetCountriesByName(string name)
+       public List<Country> GetCountriesByRegionId(int regionId)
+       {
+           var countries =
+               GetCountries()
+               .Where(c => c.RegionId == regionId)
+               .ToList();
+           return countries;
+       }
+        */
+
+
+        public bool checkIdExist(string id)
         {
-            var countries =
-                GetCountries()
-                .Where(c => c.CountryName.ToLower().Contains(name))
-                .ToList();
-            return countries;
+            var check =
+               GetCountries()
+               .Any(c => c.CountryId == id);
+            return check;
         }
 
-        public List<Country> GetCountriesByRegionId(int regionId)
+        public List<Country> FilterCountries(string? name, int? regionId)
         {
-            var countries =
-                GetCountries()
-                .Where(c => c.RegionId == regionId)
-                .ToList();
-            return countries;
-        }
+            var allCountrys = GetCountries().AsQueryable();
 
+            if (!string.IsNullOrEmpty(name))
+            {
+                allCountrys = allCountrys.Where(c => c.CountryName.Contains(name, StringComparison.OrdinalIgnoreCase));
+            }
+            if (regionId.HasValue && regionId != 0)
+            {
+                allCountrys = allCountrys.Where(c => c.RegionId == regionId);
+            }
+
+            return allCountrys.ToList();
+        }
 
     }
 }

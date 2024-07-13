@@ -44,6 +44,7 @@ namespace Services
 
         /* New feature */
 
+        /*
         public List<Job> GetJobBySalary(int minSalary, int maxSalary)
         {
             var jobs =
@@ -61,6 +62,7 @@ namespace Services
                 .ToList();
             return jobs;
         }
+        */
 
         public bool checkIdExist(string id)
         {
@@ -68,6 +70,22 @@ namespace Services
                 GetJobs()
                 .Any(j => j.JobId == id);
             return job;
+        }
+
+        public List<Job> FilterJob(string? title, int? minSalary, int? maxSalary)
+        {
+            var allJobs = GetJobs().AsQueryable();
+
+            if (!string.IsNullOrEmpty(title))
+            {
+                allJobs = allJobs.Where(j => j.JobTitle.Contains(title, StringComparison.OrdinalIgnoreCase));
+            }
+            if (minSalary.HasValue && maxSalary.HasValue)
+            {
+                allJobs = allJobs.Where(j => j.MinSalary >= minSalary && j.MaxSalary <= maxSalary);
+            }
+
+            return allJobs.ToList();
         }
     }
 }

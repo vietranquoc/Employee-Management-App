@@ -16,5 +16,6 @@ namespace Services
         Region? GetRegionById(int id);
         /*New feature*/
         List<Region> GetRegionsByName(string name);
+        bool CheckIdExist(int id);
     }
 }

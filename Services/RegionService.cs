@@ -53,6 +53,12 @@ namespace Services
             return regions;
         }
 
-
+        public bool CheckIdExist(int id)
+        {
+            var check =
+                GetRegions()
+                .Any(r => r.RegionId == id);
+            return check;
+        }
     }
 }
