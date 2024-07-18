@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BusinessObjects;
 
@@ -36,4 +37,7 @@ public partial class Employee
     public virtual Job? Job { get; set; }
 
     public virtual Employee? Manager { get; set; }
+
+    [NotMapped] //lưu trữ giá trị tạm thời này khi tải dữ liệu
+    public int Status { get; set; } = 1;
 }

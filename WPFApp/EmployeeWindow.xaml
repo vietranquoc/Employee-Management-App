@@ -21,6 +21,7 @@
             <RowDefinition Height="36"/>
             <RowDefinition Height="36"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
@@ -128,19 +129,37 @@
                 <DataGridTextColumn Width="*" Header="Commission PCT" Binding="{Binding CommissionPct}"/>
                 <DataGridTextColumn Width="*" Header="Manager Id" Binding="{Binding ManagerId}"/>
                 <DataGridTextColumn Width="*" Header="Department Id" Binding="{Binding DepartmentId}"/>
+                <DataGridTextColumn Width="*" Header="Status" Binding="{Binding Status}"/>
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button x:Name="btnCreate" Content="Create" HorizontalAlignment="Left" Margin="83,10,0,10" Grid.Row="11"
+        <StackPanel Grid.Row="11" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="&lt;&lt; First " Click="OnFirstPageClicked" Margin="5"/>
+            <Button Content="&lt; Prev " Click="OnPreviousClicked" Margin="5"/>
+
+            <TextBlock Grid.Row="11" Grid.Column="3" Margin="2" Width="50" VerticalAlignment="Center">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat=" {0} of {1}">
+                        <Binding Path="CurrentPageNumber" />
+                        <Binding Path="TotalPages" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <Button Content=" Next >" Click="OnNextClicked" Margin="5"/>
+            <Button Content=" Last >>" Click="OnLastPageClicked" Margin="5"/>
+        </StackPanel>
+
+        <Button x:Name="btnCreate" Content="Create" HorizontalAlignment="Left" Margin="83,10,0,10" Grid.Row="12"
         Width="120"  Background="DodgerBlue" Foreground="White" Grid.Column="3"
         Click="btnCreate_Click"/>
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="281,10,0,10" Grid.Row="11"
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="281,10,0,10" Grid.Row="12"
         Width="120"  Background="ForestGreen" Foreground="White" Grid.Column="3"
         Click="btnUpdate_Click"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="478,10,0,10" Grid.Row="11"
-        Width="120"  Background="Olive" Foreground="White" Grid.Column="3"
+        <Button x:Name="btnDelete" Content="Remove" HorizontalAlignment="Left" Margin="478,10,0,10" Grid.Row="12"
+        Width="120"  Background="DimGray" Foreground="White" Grid.Column="3"
         Click="btnDelete_Click"/>
-        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="679,10,0,10" Grid.Row="11"
+        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="679,10,0,10" Grid.Row="12"
         Width="120"  Background="OrangeRed" Foreground="White" Grid.Column="3"
         Click="btnClose_Click"/>
     </Grid>

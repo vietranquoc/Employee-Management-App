@@ -1,7 +1,9 @@
 ﻿using BusinessObjects;
 using Services;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms.VisualStyles;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -19,19 +22,25 @@ namespace WPFApp
     /// <summary>
     /// Interaction logic for EmployeeWindow.xaml
     /// </summary>
-    public partial class EmployeeWindow : Window
+    public partial class EmployeeWindow : Window, INotifyPropertyChanged
     {
         private readonly IEmployeeService iEmployeeService;
         private readonly IJobService iJobService;
         private readonly IDepartmentService iDepartmentService;
+        private PagingCollectionView _cView;
 
         public int? CurrentUserRole { get; set; } // Store current user's role
+
+        // Properties for current page and total pages
+        public int CurrentPageNumber => _cView.CurrentPage; // Displayed page numbers should start from 1
+        public int TotalPages => _cView.PageCount;
         public EmployeeWindow()
         {
             InitializeComponent();
             iEmployeeService = new EmployeeService();
             iJobService = new JobService();
             iDepartmentService = new DepartmentService();
+            //this.DataContext = this._cView;
         }
 
         private void ApplyAuthorization()
@@ -51,7 +60,12 @@ namespace WPFApp
             {
                 dgData.ItemsSource = null;
                 var employees = iEmployeeService.GetEmployees();
-                dgData.ItemsSource = employees;
+                _cView = new PagingCollectionView(employees, 20);
+                dgData.ItemsSource = _cView;
+
+                this.DataContext = this; // Set DataContext after initializing _cView
+                OnPropertyChanged(nameof(CurrentPageNumber));
+                OnPropertyChanged(nameof(TotalPages));
             }
             catch (Exception ex)
             {
@@ -137,6 +151,7 @@ namespace WPFApp
 
         private void dgData_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            /*
             DataGrid dataGrid = sender as DataGrid;
             if (dataGrid.ItemsSource != null)
             {
@@ -159,6 +174,25 @@ namespace WPFApp
                     txtCommission.Text = employee.CommissionPct.ToString();
                     cboManager.SelectedValue = employee.ManagerId;
                     cboDepartment.SelectedValue = employee.DepartmentId;
+                }
+            }*/
+            DataGrid dataGrid = sender as DataGrid;
+            if (dataGrid != null && dataGrid.SelectedIndex >= 0)
+            {
+                var selectedEmployee = dataGrid.SelectedItem as Employee;
+                if (selectedEmployee != null)
+                {
+                    txtEmployeeId.Text = selectedEmployee.EmployeeId.ToString();
+                    txtFirstName.Text = selectedEmployee.FirstName;
+                    txtLastName.Text = selectedEmployee.LastName;
+                    txtEmail.Text = selectedEmployee.Email;
+                    txtPhone.Text = selectedEmployee.Phone;
+                    dpHireDate.Text = selectedEmployee.HireDate.ToString();
+                    cboJob.SelectedValue = selectedEmployee.JobId;
+                    txtSalary.Text = selectedEmployee.Salary.ToString();
+                    txtCommission.Text = selectedEmployee.CommissionPct.ToString();
+                    cboManager.SelectedValue = selectedEmployee.ManagerId;
+                    cboDepartment.SelectedValue = selectedEmployee.DepartmentId;
                 }
             }
         }
@@ -515,14 +549,11 @@ namespace WPFApp
                 };
                 iEmployeeService.InsertEmployee(employee);
                 MessageBox.Show("Create Successfully");
+                LoadEmployees();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not create new Employee");
-            }
-            finally
-            {
-                LoadEmployees();
             }
         }
 
@@ -604,6 +635,7 @@ namespace WPFApp
                         employee.DepartmentId = int.Parse(cboDepartment.SelectedValue.ToString());
                         iEmployeeService.UpdateEmployee(employee);
                         MessageBox.Show("Update Successfully");
+                        LoadEmployees();
                     }
                     else
                     {
@@ -618,10 +650,6 @@ namespace WPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: Can not update Employee");
-            }
-            finally
-            {
-                LoadEmployees();
             }
         }
 
@@ -641,8 +669,10 @@ namespace WPFApp
                     
                     if (employee != null)
                     {
-                        iEmployeeService.DeleteEmployee(employee);
-                        MessageBox.Show("Delete Successfully");
+                        //iEmployeeService.DeleteEmployee(employee);
+                        employee.Status = 0;
+                        MessageBox.Show("Remove Successfully");
+                        LoadEmployees();
                     }
                     else
                     {
@@ -658,15 +688,155 @@ namespace WPFApp
             {
                 MessageBox.Show(ex.Message, "Error: Can not delete Employee");
             }
-            finally
-            {
-                LoadEmployees();
-            }
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+        private void OnPreviousClicked(object sender, RoutedEventArgs e)
+        {
+            _cView.MoveToPreviousPage();
+            OnPropertyChanged(nameof(CurrentPageNumber));
+        }
+
+        private void OnNextClicked(object sender, RoutedEventArgs e)
+        {
+            _cView.MoveToNextPage();
+            OnPropertyChanged(nameof(CurrentPageNumber));
+        }
+        private void OnFirstPageClicked(object sender, RoutedEventArgs e)
+        {
+            _cView.MoveToFirstPage();
+            OnPropertyChanged(nameof(CurrentPageNumber));
+        }
+
+        private void OnLastPageClicked(object sender, RoutedEventArgs e)
+        {
+            _cView.MoveToLastPage();
+            OnPropertyChanged(nameof(CurrentPageNumber));
+        }
+
+        // Implement INotifyPropertyChanged interface for updating UI bindings
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
     }
+
+    public class PagingCollectionView : CollectionView
+    {
+        private readonly IList _innerList;
+        private readonly int _itemsPerPage;
+        private int _currentPage = 1;
+
+        public PagingCollectionView(IList innerList, int itemsPerPage) : base(innerList)
+        {
+            this._innerList = innerList;
+            this._itemsPerPage = itemsPerPage;
+        }
+
+        public override int Count
+        {
+            get
+            {
+                if (this._innerList.Count == 0) return 0;
+                if (this._currentPage < this.PageCount) // page 1..n-1
+                {
+                    return this._itemsPerPage;
+                }
+                else // page n
+                {
+                    var itemsLeft = this._innerList.Count % this._itemsPerPage;
+                    if (0 == itemsLeft)
+                    {
+                        return this._itemsPerPage; // exactly itemsPerPage left
+                    }
+                    else
+                    {
+                        // return the remaining items
+                        return itemsLeft;
+                    }
+                }
+            }
+        }
+
+        public int CurrentPage
+        {
+            get { return this._currentPage; }
+            set
+            {
+                if (value < 1 || value > this.PageCount)
+                {
+                    throw new ArgumentOutOfRangeException("value");
+                }
+
+                this._currentPage = value;
+                this.OnPropertyChanged(new PropertyChangedEventArgs(nameof(CurrentPage)));
+                this.Refresh();
+            }
+        }
+
+        public int ItemsPerPage { get { return this._itemsPerPage; } }
+
+        public int PageCount
+        {
+            get
+            {
+                return (int)Math.Ceiling((double)this._innerList.Count / this._itemsPerPage);
+            }
+        }
+
+        private int EndIndex
+        {
+            get
+            {
+                var end = this._currentPage * this._itemsPerPage;
+                return (end > this._innerList.Count) ? this._innerList.Count : end;
+            }
+        }
+
+        private int StartIndex
+        {
+            get { return (this._currentPage - 1) * this._itemsPerPage; }
+        }
+
+        public override object GetItemAt(int index)
+        {
+            var offset = index % this._itemsPerPage;
+            return this._innerList[this.StartIndex + offset];
+        }
+
+        public void MoveToNextPage()
+        {
+            if (this._currentPage < this.PageCount)
+            {
+                this.CurrentPage += 1;
+            }
+        }
+
+        public void MoveToPreviousPage()
+        {
+            if (this._currentPage > 1)
+            {
+                this.CurrentPage -= 1;
+            }
+        }
+
+        public void MoveToFirstPage()
+        {
+            this.CurrentPage = 1;
+        }
+
+        public void MoveToLastPage()
+        {
+            this.CurrentPage = this.PageCount;
+        }
+    }
+
 }
